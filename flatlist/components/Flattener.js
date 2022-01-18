@@ -1,5 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import FlatItem from './FlatItem';
+import FlatData from '../data/FlatData';
 
 const Flattener = () => {
     return (
