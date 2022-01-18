@@ -1,12 +1,24 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, FlatList, View } from 'react-native';
 import FlatItem from './FlatItem';
 import FlatData from '../data/FlatData';
 
 const Flattener = () => {
     return (
         <SafeAreaView>
-            <Text>Flattener</Text>
+            <FlatList data={FlatData}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                scrollEventThrottle={32}
+                bouncesZoom={true}
+                zoomScale={2}
+                maximumZoomScale={10}
+                minimumZoomScale={2}
+                bounces={false}
+                renderItem={
+                    ({item}) => <FlatItem item = {item}/>
+                }
+            />
         </SafeAreaView>
     )
 }
